@@ -12,6 +12,12 @@ class UserRepositoryPrisma implements UserRepository{
         return result;
     }
 
+    async listAllUsers(): Promise<User[]> {
+        const result = await prisma.user.findMany();
+
+        return result || null
+    }
+
     async findByEmail(email:string): Promise<User | null>{
         const result = await prisma.user.findFirst({
             where: {

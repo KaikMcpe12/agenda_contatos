@@ -16,6 +16,12 @@ class UserUseCase{
 
         return result;
     }
+
+    async listAllUsers(){
+        const result = await this.userRepository.listAllUsers()
+
+        return result
+    }
 }
 
 export { UserUseCase }

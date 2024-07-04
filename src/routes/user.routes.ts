@@ -17,7 +17,13 @@ export async function userRoutes(app: FastifyInstance){
         }
     })
 
-    app.get('/', (req, reply) => {
-        reply.send({hello: 'World'})
+    app.get('/', async(req, reply) => {
+        try {
+            const data = await userUseCase.listAllUsers()
+            
+            return reply.send(data)
+        } catch (error) {
+            reply.send(error)
+        }
     })
 }
