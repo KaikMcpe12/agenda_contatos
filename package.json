@@ -2,7 +2,7 @@
   "name": "agenda_de_contatos",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "type": "module",
   "engines": {
     "node": "20.10.0"
@@ -12,7 +12,7 @@
     "dev": "tsx watch src/server.ts"
   },
   "keywords": [],
-  "author": "",
+  "author": "kaik",
   "license": "ISC",
   "devDependencies": {
     "prisma": "^5.16.1",
